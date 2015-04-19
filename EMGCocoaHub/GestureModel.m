@@ -51,7 +51,7 @@
     if (self)
     {
         self.emg_gesture = (emg_gesture_t *)malloc(sizeof(emg_gesture_t));
-        *self.emg_gesture = init_emg_gesture("", 10);
+        *self.emg_gesture = init_emg_gesture("", MAX_CHANNELS * NUM_FEATURES);
         self.numberOfObservations = @0;
     }
     

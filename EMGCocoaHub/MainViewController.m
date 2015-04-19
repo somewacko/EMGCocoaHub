@@ -24,6 +24,8 @@
 
 @property (nonatomic) BOOL isTraining;
 
+@property (nonatomic, strong) BluetoothInterface *bluetoothInterface;
+
 @end
 
 
@@ -35,6 +37,12 @@
     
     self.gestures   = [NSMutableArray new];
     self.isTraining = NO;
+
+    BOXCOX_LAMBDA = 0.4;
+    MAX_CHANNELS = 2;
+    
+    self.bluetoothInterface = [[BluetoothInterface alloc] initWithDelegate:self];
+    [self.bluetoothInterface connect];
 }
 
 
@@ -248,33 +256,24 @@
 }
 
 
-#pragma mark - SerialBluetoothInterfaceDelegate
+#pragma mark - BluetoothInterfaceDelegate
 
-- (void)serialBluetoothInterface:(SerialBluetoothInterface *)interface
-          didEstablishConnection:(BOOL)connectionEstablished
+- (void)bluetoothInterfaceDidConnectToDevice:(BluetoothInterface *)interface
 {
-    [self displayLog:@"Bluetooth connection established"];
+    NSLog(@"Connected!");
 }
 
 
-- (void)serialBluetoothInterface:(SerialBluetoothInterface *)interface
-              didReceiveFeatures:(fmatrix_t *)features
-                         isOnset:(BOOL)isOnset
+- (void)bluetoothInterfaceFailedToConnectToDevice:(BluetoothInterface *)interface
 {
-    if (isOnset)
-    {
+    NSLog(@"Failed!");
+}
+
+
+- (void)bluetoothInterface:(BluetoothInterface *)interface didReceiveFeatures:(fmatrix_t *)features isOnset:(BOOL)onset
+{
+    if (onset)
         [self handleMotionOnset:features];
-    }
-    else
-    {
-        // Offset not supported yet
-    }
-}
-
-
-- (void)serialBluetoothInterfaceConnectionDidClose:(SerialBluetoothInterface *)interface
-{
-    [self displayLog:@"Bluetooth connection closed"];
 }
 
 

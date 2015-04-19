@@ -6,12 +6,13 @@
 //  Copyright (c) 2015 Virginia Commonwealth University. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
+@import IOBluetooth;
 
-#import "SerialBluetoothInterface.h"
+#import "BluetoothInterface.h"
 
 @interface MainViewController : NSViewController < NSTableViewDataSource,
                                                    NSTableViewDelegate,
-                                                   SerialBluetoothInterfaceDelegate >
+                                                   BluetoothInterfaceDelegate >
 
 @end

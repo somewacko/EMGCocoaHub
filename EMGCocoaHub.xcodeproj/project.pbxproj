@@ -14,13 +14,15 @@
 		527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA21AE344B100C9A222 /* emg_gesture.c */; };
 		527B0AA71AE344B100C9A222 /* emg_matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA41AE344B100C9A222 /* emg_matrix.c */; };
 		52E562CA1AE3FAB600D2DD7F /* TestData.c in Sources */ = {isa = PBXBuildFile; fileRef = 52E562C91AE3FAB600D2DD7F /* TestData.c */; };
+		52E562CD1AE4233600D2DD7F /* constants.c in Sources */ = {isa = PBXBuildFile; fileRef = 52E562CC1AE4233600D2DD7F /* constants.c */; };
+		52E562CF1AE44D8600D2DD7F /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E562CE1AE44D8600D2DD7F /* IOBluetooth.framework */; };
+		52E562D21AE461E900D2DD7F /* BluetoothInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E562D11AE461E900D2DD7F /* BluetoothInterface.m */; };
 		52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52141AE2DD5700D3D20D /* AppDelegate.m */; };
 		52EF52171AE2DD5700D3D20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52161AE2DD5700D3D20D /* main.m */; };
 		52EF52191AE2DD5700D3D20D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52181AE2DD5700D3D20D /* Images.xcassets */; };
 		52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52321AE2DD6F00D3D20D /* MainViewController.m */; };
 		52EF52351AE2DD6F00D3D20D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52331AE2DD6F00D3D20D /* MainViewController.xib */; };
 		52EF523B1AE2E12000D3D20D /* GestureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF523A1AE2E12000D3D20D /* GestureModel.m */; };
-		52EF523F1AE2FBEE00D3D20D /* SerialBluetoothInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		527B0AA51AE344B100C9A222 /* emg_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emg_matrix.h; path = "emg-classifier/cemg/emg_matrix.h"; sourceTree = "<group>"; };
 		52E562C91AE3FAB600D2DD7F /* TestData.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestData.c; sourceTree = "<group>"; };
 		52E562CB1AE3FC8600D2DD7F /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestData.h; sourceTree = "<group>"; };
+		52E562CC1AE4233600D2DD7F /* constants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = constants.c; path = "emg-classifier/cemg/constants.c"; sourceTree = "<group>"; };
+		52E562CE1AE44D8600D2DD7F /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		52E562D01AE461E900D2DD7F /* BluetoothInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothInterface.h; sourceTree = "<group>"; };
+		52E562D11AE461E900D2DD7F /* BluetoothInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothInterface.m; sourceTree = "<group>"; };
 		52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMGCocoaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EF52121AE2DD5700D3D20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EF52131AE2DD5700D3D20D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,8 +54,6 @@
 		52EF52331AE2DD6F00D3D20D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		52EF52391AE2E12000D3D20D /* GestureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureModel.h; sourceTree = "<group>"; };
 		52EF523A1AE2E12000D3D20D /* GestureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureModel.m; sourceTree = "<group>"; };
-		52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialBluetoothInterface.h; sourceTree = "<group>"; };
-		52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialBluetoothInterface.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E562CF1AE44D8600D2DD7F /* IOBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				527B0AA11AE344B100C9A222 /* constants.h */,
-				527B0AA21AE344B100C9A222 /* emg_gesture.c */,
+				52E562CC1AE4233600D2DD7F /* constants.c */,
 				527B0AA31AE344B100C9A222 /* emg_gesture.h */,
-				527B0AA41AE344B100C9A222 /* emg_matrix.c */,
+				527B0AA21AE344B100C9A222 /* emg_gesture.c */,
 				527B0AA51AE344B100C9A222 /* emg_matrix.h */,
+				527B0AA41AE344B100C9A222 /* emg_matrix.c */,
 			);
 			name = "emg-classifier";
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 		52EF52051AE2DD5700D3D20D = {
 			isa = PBXGroup;
 			children = (
+				52E562CE1AE44D8600D2DD7F /* IOBluetooth.framework */,
 				527B0A991AE3339200C9A222 /* emg-classifier */,
 				52EF52101AE2DD5700D3D20D /* EMGCocoaHub */,
 				52EF520F1AE2DD5700D3D20D /* Products */,
@@ -118,12 +125,12 @@
 			children = (
 				52E562CB1AE3FC8600D2DD7F /* TestData.h */,
 				52E562C91AE3FAB600D2DD7F /* TestData.c */,
+				52E562D01AE461E900D2DD7F /* BluetoothInterface.h */,
+				52E562D11AE461E900D2DD7F /* BluetoothInterface.m */,
 				52EF52391AE2E12000D3D20D /* GestureModel.h */,
 				52EF523A1AE2E12000D3D20D /* GestureModel.m */,
 				5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */,
 				5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */,
-				52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */,
-				52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */,
 				5237C9431AE2FFCB0089A0A7 /* Views */,
 				527B0AA81AE3464300C9A222 /* Interfaces */,
 				52EF52181AE2DD5700D3D20D /* Images.xcassets */,
@@ -215,13 +222,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EF52171AE2DD5700D3D20D /* main.m in Sources */,
-				52EF523F1AE2FBEE00D3D20D /* SerialBluetoothInterface.m in Sources */,
 				527B0AA71AE344B100C9A222 /* emg_matrix.c in Sources */,
 				52EF523B1AE2E12000D3D20D /* GestureModel.m in Sources */,
 				5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */,
 				52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */,
+				52E562D21AE461E900D2DD7F /* BluetoothInterface.m in Sources */,
 				527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */,
 				52E562CA1AE3FAB600D2DD7F /* TestData.c in Sources */,
+				52E562CD1AE4233600D2DD7F /* constants.c in Sources */,
 				5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */,
 				52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */,
 			);
@@ -324,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = EMGCocoaHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -335,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = EMGCocoaHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
