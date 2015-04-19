@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5237C9421AE2FE7A0089A0A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EF521A1AE2DD5700D3D20D /* MainMenu.xib */; };
+		5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237C94A1AE312F10089A0A7 /* GestureWindowController.m */; };
+		5237C94D1AE312F10089A0A7 /* GestureWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */; };
+		5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */; };
+		52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52141AE2DD5700D3D20D /* AppDelegate.m */; };
+		52EF52171AE2DD5700D3D20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52161AE2DD5700D3D20D /* main.m */; };
+		52EF52191AE2DD5700D3D20D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52181AE2DD5700D3D20D /* Images.xcassets */; };
+		52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52321AE2DD6F00D3D20D /* MainViewController.m */; };
+		52EF52351AE2DD6F00D3D20D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52331AE2DD6F00D3D20D /* MainViewController.xib */; };
+		52EF523B1AE2E12000D3D20D /* GestureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF523A1AE2E12000D3D20D /* GestureModel.m */; };
+		52EF523F1AE2FBEE00D3D20D /* SerialBluetoothInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5237C9491AE312F10089A0A7 /* GestureWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureWindowController.h; sourceTree = "<group>"; };
+		5237C94A1AE312F10089A0A7 /* GestureWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureWindowController.m; sourceTree = "<group>"; };
+		5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GestureWindowController.xib; sourceTree = "<group>"; };
+		5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCaptureTextField.h; sourceTree = "<group>"; };
+		5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCaptureTextField.m; sourceTree = "<group>"; };
+		52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMGCocoaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EF52121AE2DD5700D3D20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EF52131AE2DD5700D3D20D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52EF52141AE2DD5700D3D20D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52EF52161AE2DD5700D3D20D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52EF52181AE2DD5700D3D20D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		52EF521B1AE2DD5700D3D20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		52EF52311AE2DD6F00D3D20D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		52EF52321AE2DD6F00D3D20D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		52EF52331AE2DD6F00D3D20D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		52EF52391AE2E12000D3D20D /* GestureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureModel.h; sourceTree = "<group>"; };
+		52EF523A1AE2E12000D3D20D /* GestureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureModel.m; sourceTree = "<group>"; };
+		52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialBluetoothInterface.h; sourceTree = "<group>"; };
+		52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialBluetoothInterface.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52EF520B1AE2DD5700D3D20D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5237C9431AE2FFCB0089A0A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5237C9491AE312F10089A0A7 /* GestureWindowController.h */,
+				5237C94A1AE312F10089A0A7 /* GestureWindowController.m */,
+				5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */,
+				5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */,
+				52EF52311AE2DD6F00D3D20D /* MainViewController.h */,
+				52EF52321AE2DD6F00D3D20D /* MainViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5237C9441AE2FFD30089A0A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52EF52391AE2E12000D3D20D /* GestureModel.h */,
+				52EF523A1AE2E12000D3D20D /* GestureModel.m */,
+				52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */,
+				52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52EF52051AE2DD5700D3D20D = {
+			isa = PBXGroup;
+			children = (
+				52EF52101AE2DD5700D3D20D /* EMGCocoaHub */,
+				52EF520F1AE2DD5700D3D20D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52EF520F1AE2DD5700D3D20D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52EF52101AE2DD5700D3D20D /* EMGCocoaHub */ = {
+			isa = PBXGroup;
+			children = (
+				5237C9441AE2FFD30089A0A7 /* Models */,
+				5237C9431AE2FFCB0089A0A7 /* Views */,
+				52EF52131AE2DD5700D3D20D /* AppDelegate.h */,
+				52EF52141AE2DD5700D3D20D /* AppDelegate.m */,
+				5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */,
+				52EF521A1AE2DD5700D3D20D /* MainMenu.xib */,
+				52EF52331AE2DD6F00D3D20D /* MainViewController.xib */,
+				52EF52181AE2DD5700D3D20D /* Images.xcassets */,
+				52EF52111AE2DD5700D3D20D /* Supporting Files */,
+			);
+			path = EMGCocoaHub;
+			sourceTree = "<group>";
+		};
+		52EF52111AE2DD5700D3D20D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52EF52121AE2DD5700D3D20D /* Info.plist */,
+				52EF52161AE2DD5700D3D20D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52EF520D1AE2DD5700D3D20D /* EMGCocoaHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52EF522B1AE2DD5700D3D20D /* Build configuration list for PBXNativeTarget "EMGCocoaHub" */;
+			buildPhases = (
+				52EF520A1AE2DD5700D3D20D /* Sources */,
+				52EF520B1AE2DD5700D3D20D /* Frameworks */,
+				52EF520C1AE2DD5700D3D20D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMGCocoaHub;
+			productName = EMGClassifierHub;
+			productReference = 52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52EF52061AE2DD5700D3D20D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Virginia Commonwealth University";
+				TargetAttributes = {
+					52EF520D1AE2DD5700D3D20D = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 52EF52091AE2DD5700D3D20D /* Build configuration list for PBXProject "EMGCocoaHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52EF52051AE2DD5700D3D20D;
+			productRefGroup = 52EF520F1AE2DD5700D3D20D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52EF520D1AE2DD5700D3D20D /* EMGCocoaHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52EF520C1AE2DD5700D3D20D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5237C9421AE2FE7A0089A0A7 /* MainMenu.xib in Resources */,
+				52EF52191AE2DD5700D3D20D /* Images.xcassets in Resources */,
+				52EF52351AE2DD6F00D3D20D /* MainViewController.xib in Resources */,
+				5237C94D1AE312F10089A0A7 /* GestureWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52EF520A1AE2DD5700D3D20D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EF52171AE2DD5700D3D20D /* main.m in Sources */,
+				52EF523F1AE2FBEE00D3D20D /* SerialBluetoothInterface.m in Sources */,
+				52EF523B1AE2E12000D3D20D /* GestureModel.m in Sources */,
+				5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */,
+				52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */,
+				5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */,
+				52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52EF521A1AE2DD5700D3D20D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52EF521B1AE2DD5700D3D20D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52EF52291AE2DD5700D3D20D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52EF522A1AE2DD5700D3D20D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52EF522C1AE2DD5700D3D20D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EMGCocoaHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = EMGCocoaHub;
+			};
+			name = Debug;
+		};
+		52EF522D1AE2DD5700D3D20D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EMGCocoaHub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = EMGCocoaHub;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52EF52091AE2DD5700D3D20D /* Build configuration list for PBXProject "EMGCocoaHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EF52291AE2DD5700D3D20D /* Debug */,
+				52EF522A1AE2DD5700D3D20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52EF522B1AE2DD5700D3D20D /* Build configuration list for PBXNativeTarget "EMGCocoaHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EF522C1AE2DD5700D3D20D /* Debug */,
+				52EF522D1AE2DD5700D3D20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52EF52061AE2DD5700D3D20D /* Project object */;
+}
