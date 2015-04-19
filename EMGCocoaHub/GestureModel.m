@@ -9,6 +9,10 @@
 #import "GestureModel.h"
 
 
+@implementation ClassificationInfo
+@end
+
+
 @interface GestureModel()
 
 @end
@@ -16,7 +20,7 @@
 
 @implementation GestureModel
 
-+ (GestureModel *)classifyFeatureVector:(fmatrix_t *)features gestures:(NSArray *)gestures
++ (ClassificationInfo *)classifyFeatureVector:(fmatrix_t *)features gestures:(NSArray *)gestures
 {
     emg_gesture_t * emg_gestures[gestures.count];
     
@@ -31,7 +35,12 @@
         if (gesture.emg_gesture == info.identified_gesture)
             identifiedGesture = gesture;
     
-    return identifiedGesture;
+    
+    ClassificationInfo *classificationInfo = [[ClassificationInfo alloc] init];
+    classificationInfo.gesture = identifiedGesture;
+    classificationInfo.confidence = [NSNumber numberWithFloat:info.distance];
+    
+    return classificationInfo;
 }
 
 
@@ -42,7 +51,7 @@
     if (self)
     {
         self.emg_gesture = (emg_gesture_t *)malloc(sizeof(emg_gesture_t));
-        *self.emg_gesture = init_emg_gesture("", MAX_CHANNELS*NUM_FEATURES);
+        *self.emg_gesture = init_emg_gesture("", 10);
         self.numberOfObservations = @0;
     }
     
@@ -67,8 +76,11 @@
 
 - (void)addFeatureVector:(fmatrix_t *)features;
 {
-    train_gesture(self.emg_gesture, features);
-    self.numberOfObservations = [NSNumber numberWithInt:self.numberOfObservations.intValue+1];
+    if (self.emg_gesture->observations.rows < MAX_MATRIX_ROWS)
+    {
+        train_gesture(self.emg_gesture, features);
+        self.numberOfObservations = [NSNumber numberWithInt:self.numberOfObservations.intValue+1];
+    }
 }
 
 

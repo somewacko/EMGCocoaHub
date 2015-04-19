@@ -8,6 +8,9 @@
 
 #import "MainViewController.h"
 
+#include "emg_matrix.h"
+#include "TestData.h"
+
 #import "GestureModel.h"
 #import "GestureWindowController.h"
 
@@ -43,6 +46,39 @@
 }
 
 
+- (void)handleMotionOnset:(fmatrix_t *)features
+{
+    if (self.isTraining)
+    {
+        if (self.tableView.selectedRow >= 0)
+        {
+            GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
+            [gesture addFeatureVector:features];
+            
+            [self displayLog:[NSString stringWithFormat:@"Training received for: \"%@\"", gesture.gestureName]];
+            NSInteger selectedRow = self.tableView.selectedRow;
+            [self.tableView reloadData];
+            [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:selectedRow] byExtendingSelection:NO];
+        }
+    }
+    else
+    {
+        ClassificationInfo *info = [GestureModel classifyFeatureVector:features gestures:self.gestures];
+        
+        if (info.gesture)
+        {
+            [info.gesture performKeyDown];
+            
+            [self displayLog:[NSString stringWithFormat:@"Identified gesture: \"%@\" with confidence: %@", info.gesture.gestureName, info.confidence]];
+        }
+        else
+        {
+            [self displayLog:@"Received message but was unable to classify"];
+        }
+    }
+}
+
+
 #pragma mark - User Actions
 
 - (IBAction)toggleTrainingMode:(id)sender
@@ -59,7 +95,7 @@
     {
         [self displayLog:@"Taken out of training mode."];
         
-        if (self.tableView.selectedRow > 0)
+        if (self.tableView.selectedRow >= 0)
         {
             GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
             
@@ -202,7 +238,7 @@
 
 - (void)tableViewSelectionIsChanging:(NSNotification *)notification
 {
-    if (self.isTraining && self.tableView.selectedRow > 0)
+    if (self.isTraining && self.tableView.selectedRow >= 0)
     {
         GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
         
@@ -225,37 +261,13 @@
               didReceiveFeatures:(fmatrix_t *)features
                          isOnset:(BOOL)isOnset
 {
-    if (self.isTraining)
+    if (isOnset)
     {
-        if (self.tableView.selectedRow > 0)
-        {
-            GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
-            [gesture addFeatureVector:features];
-            
-            [self displayLog:[NSString stringWithFormat:@"Training received for: \"%@\"", gesture.gestureName]];
-        }
+        [self handleMotionOnset:features];
     }
     else
     {
-        if (isOnset)
-        {
-            GestureModel *gesture = [GestureModel classifyFeatureVector:features gestures:self.gestures];
-            
-            if (gesture)
-            {
-                [gesture performKeyDown];
-                
-                [self displayLog:[NSString stringWithFormat:@"Identified gesture: \"%@\"", gesture.gestureName]];
-            }
-            else
-            {
-                [self displayLog:@"Received message but was unable to classify"];
-            }
-        }
-        else
-        {
-            // Doesn't handle offset yet.
-        }
+        // Offset not supported yet
     }
 }
 
@@ -263,6 +275,68 @@
 - (void)serialBluetoothInterfaceConnectionDidClose:(SerialBluetoothInterface *)interface
 {
     [self displayLog:@"Bluetooth connection closed"];
+}
+
+
+#pragma mark - Tests
+
+- (IBAction)testA:(id)sender
+{
+    static unsigned index;
+    
+    fmatrix_t features = init_fmatrix(1, TEST_NUM_COLS);
+    
+    for (int i = 0; i < TEST_NUM_COLS; i++)
+        features.values[0][i] = test_a[index % TEST_A_NUM_ROWS][i];
+    
+    [self handleMotionOnset:&features];
+    
+    index++;
+}
+
+
+- (IBAction)testB:(id)sender
+{
+    static unsigned index;
+    
+    fmatrix_t features = init_fmatrix(1, TEST_NUM_COLS);
+    
+    for (int i = 0; i < TEST_NUM_COLS; i++)
+        features.values[0][i] = test_b[index % TEST_B_NUM_ROWS][i];
+    
+    [self handleMotionOnset:&features];
+    
+    index++;
+}
+
+
+- (IBAction)testC:(id)sender
+{
+    static unsigned index;
+    
+    fmatrix_t features = init_fmatrix(1, TEST_NUM_COLS);
+    
+    for (int i = 0; i < TEST_NUM_COLS; i++)
+        features.values[0][i] = test_c[index % TEST_C_NUM_ROWS][i];
+    
+    [self handleMotionOnset:&features];
+    
+    index++;
+}
+
+
+- (IBAction)testD:(id)sender
+{
+    static unsigned index;
+    
+    fmatrix_t features = init_fmatrix(1, TEST_NUM_COLS);
+    
+    for (int i = 0; i < TEST_NUM_COLS; i++)
+        features.values[0][i] = test_d[index % TEST_D_NUM_ROWS][i];
+    
+    [self handleMotionOnset:&features];
+    
+    index++;
 }
 
 

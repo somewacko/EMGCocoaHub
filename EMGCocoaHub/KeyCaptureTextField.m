@@ -38,8 +38,6 @@ static id eventMonitor = nil;
                 {
                     _self.keyCode = [event keyCode];
                     
-                    NSLog(@"Keycode: %d", _self.keyCode);
-                    
                     switch (_self.keyCode)
                     {
                         case 36:

@@ -13,6 +13,7 @@
 		5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */; };
 		527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA21AE344B100C9A222 /* emg_gesture.c */; };
 		527B0AA71AE344B100C9A222 /* emg_matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA41AE344B100C9A222 /* emg_matrix.c */; };
+		52E562CA1AE3FAB600D2DD7F /* TestData.c in Sources */ = {isa = PBXBuildFile; fileRef = 52E562C91AE3FAB600D2DD7F /* TestData.c */; };
 		52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52141AE2DD5700D3D20D /* AppDelegate.m */; };
 		52EF52171AE2DD5700D3D20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52161AE2DD5700D3D20D /* main.m */; };
 		52EF52191AE2DD5700D3D20D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52181AE2DD5700D3D20D /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 		527B0AA31AE344B100C9A222 /* emg_gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emg_gesture.h; path = "emg-classifier/cemg/emg_gesture.h"; sourceTree = "<group>"; };
 		527B0AA41AE344B100C9A222 /* emg_matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emg_matrix.c; path = "emg-classifier/cemg/emg_matrix.c"; sourceTree = "<group>"; };
 		527B0AA51AE344B100C9A222 /* emg_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emg_matrix.h; path = "emg-classifier/cemg/emg_matrix.h"; sourceTree = "<group>"; };
+		52E562C91AE3FAB600D2DD7F /* TestData.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TestData.c; sourceTree = "<group>"; };
+		52E562CB1AE3FC8600D2DD7F /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestData.h; sourceTree = "<group>"; };
 		52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMGCocoaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EF52121AE2DD5700D3D20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EF52131AE2DD5700D3D20D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		52EF52101AE2DD5700D3D20D /* EMGCocoaHub */ = {
 			isa = PBXGroup;
 			children = (
+				52E562CB1AE3FC8600D2DD7F /* TestData.h */,
+				52E562C91AE3FAB600D2DD7F /* TestData.c */,
 				52EF52391AE2E12000D3D20D /* GestureModel.h */,
 				52EF523A1AE2E12000D3D20D /* GestureModel.m */,
 				5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */,
@@ -216,6 +221,7 @@
 				5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */,
 				52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */,
 				527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */,
+				52E562CA1AE3FAB600D2DD7F /* TestData.c in Sources */,
 				5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */,
 				52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */,
 			);

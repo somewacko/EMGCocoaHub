@@ -13,9 +13,19 @@
 #include "emg_matrix.h"
 
 
+@class GestureModel;
+
+
+// Simple class to hold classification info. Similar to the classification_info_t struct.
+@interface ClassificationInfo : NSObject
+@property (nonatomic, strong) GestureModel *gesture;
+@property (nonatomic, strong) NSNumber *confidence;
+@end
+
+
 @interface GestureModel : NSObject
 
-+ (GestureModel *)classifyFeatureVector:(fmatrix_t *)features gestures:(NSArray *)gestures;
++ (ClassificationInfo *)classifyFeatureVector:(fmatrix_t *)features gestures:(NSArray *)gestures;
 
 @property (nonatomic) emg_gesture_t * emg_gesture;
 

@@ -215,7 +215,7 @@
                     </scroller>
                 </scrollView>
                 <button verticalHuggingPriority="750" id="0TT-73-Uqq">
-                    <rect key="frame" x="260" y="95" width="200" height="25"/>
+                    <rect key="frame" x="260" y="106" width="200" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="Training Mode" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g8I-iV-Tkr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -226,7 +226,7 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" id="zQj-6k-6c4">
-                    <rect key="frame" x="365" y="61" width="95" height="19"/>
+                    <rect key="frame" x="365" y="81" width="95" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="Clear Gesture" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VHS-iY-9Jn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -237,7 +237,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" id="NeS-8P-Tsp">
-                    <rect key="frame" x="260" y="61" width="95" height="19"/>
+                    <rect key="frame" x="260" y="81" width="95" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="Create Gesture" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fII-1S-0R1">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -248,7 +248,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" id="6WF-kl-Bba">
-                    <rect key="frame" x="260" y="31" width="95" height="19"/>
+                    <rect key="frame" x="260" y="55" width="95" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="Edit Gesture" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uxv-UJ-Ka5">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -259,7 +259,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" id="CBd-D1-p7P">
-                    <rect key="frame" x="365" y="31" width="95" height="19"/>
+                    <rect key="frame" x="365" y="55" width="95" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="roundTextured" title="Delete Gesture" bezelStyle="texturedRounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Uib-Ne-20c">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -267,6 +267,50 @@
                     </buttonCell>
                     <connections>
                         <action selector="deleteGestureAction:" target="-2" id="47v-65-GzL"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="s24-z6-mSN">
+                    <rect key="frame" x="260" y="19" width="40" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="squareTextured" title="Test A" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qt3-Cs-KY7">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="testA:" target="-2" id="4Er-xB-tgA"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="m2X-d0-3LT">
+                    <rect key="frame" x="420" y="19" width="40" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="squareTextured" title="Test D" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YXv-IE-HSj">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="testD:" target="-2" id="jqK-eP-epL"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="G2E-P7-aEs">
+                    <rect key="frame" x="365" y="19" width="40" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="squareTextured" title="Test C" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QU4-Jq-uwy">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="testC:" target="-2" id="JDB-8M-CXG"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="9Ge-TY-JE4">
+                    <rect key="frame" x="315" y="19" width="40" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="squareTextured" title="Test B" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pUS-4B-o40">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="testB:" target="-2" id="IKk-FR-rv2"/>
                     </connections>
                 </button>
             </subviews>
