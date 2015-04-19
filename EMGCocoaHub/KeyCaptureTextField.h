@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Virginia Commonwealth University. All rights reserved.
 //
 
-//  Hacky subclass of NSTextField to 
+//  Hacky subclass of NSTextField to capture inputted key codes.
 
 #import <Cocoa/Cocoa.h>
 

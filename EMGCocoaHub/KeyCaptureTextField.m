@@ -22,6 +22,8 @@ static id eventMonitor = nil;
 
 - (BOOL)becomeFirstResponder
 {
+    // When selected, create an event monitor that steals key presses.
+
     BOOL canDo = [super becomeFirstResponder];
     
     if (canDo)
@@ -36,8 +38,16 @@ static id eventMonitor = nil;
                 {
                     _self.keyCode = [event keyCode];
                     
+                    NSLog(@"Keycode: %d", _self.keyCode);
+                    
                     switch (_self.keyCode)
                     {
+                        case 36:
+                            _self.capturedKey = @"Return";
+                            break;
+                        case 48:
+                            _self.capturedKey = @"Tab";
+                            break;
                         case 123:
                             _self.capturedKey = @"Left";
                             break;

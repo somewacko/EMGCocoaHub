@@ -11,6 +11,8 @@
 		5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237C94A1AE312F10089A0A7 /* GestureWindowController.m */; };
 		5237C94D1AE312F10089A0A7 /* GestureWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */; };
 		5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */; };
+		527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA21AE344B100C9A222 /* emg_gesture.c */; };
+		527B0AA71AE344B100C9A222 /* emg_matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 527B0AA41AE344B100C9A222 /* emg_matrix.c */; };
 		52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52141AE2DD5700D3D20D /* AppDelegate.m */; };
 		52EF52171AE2DD5700D3D20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF52161AE2DD5700D3D20D /* main.m */; };
 		52EF52191AE2DD5700D3D20D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EF52181AE2DD5700D3D20D /* Images.xcassets */; };
@@ -26,6 +28,11 @@
 		5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GestureWindowController.xib; sourceTree = "<group>"; };
 		5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyCaptureTextField.h; sourceTree = "<group>"; };
 		5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyCaptureTextField.m; sourceTree = "<group>"; };
+		527B0AA11AE344B100C9A222 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = "emg-classifier/cemg/constants.h"; sourceTree = "<group>"; };
+		527B0AA21AE344B100C9A222 /* emg_gesture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emg_gesture.c; path = "emg-classifier/cemg/emg_gesture.c"; sourceTree = "<group>"; };
+		527B0AA31AE344B100C9A222 /* emg_gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emg_gesture.h; path = "emg-classifier/cemg/emg_gesture.h"; sourceTree = "<group>"; };
+		527B0AA41AE344B100C9A222 /* emg_matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emg_matrix.c; path = "emg-classifier/cemg/emg_matrix.c"; sourceTree = "<group>"; };
+		527B0AA51AE344B100C9A222 /* emg_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emg_matrix.h; path = "emg-classifier/cemg/emg_matrix.h"; sourceTree = "<group>"; };
 		52EF520E1AE2DD5700D3D20D /* EMGCocoaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMGCocoaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EF52121AE2DD5700D3D20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EF52131AE2DD5700D3D20D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,28 +65,38 @@
 			children = (
 				5237C9491AE312F10089A0A7 /* GestureWindowController.h */,
 				5237C94A1AE312F10089A0A7 /* GestureWindowController.m */,
-				5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */,
-				5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */,
 				52EF52311AE2DD6F00D3D20D /* MainViewController.h */,
 				52EF52321AE2DD6F00D3D20D /* MainViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		5237C9441AE2FFD30089A0A7 /* Models */ = {
+		527B0A991AE3339200C9A222 /* emg-classifier */ = {
 			isa = PBXGroup;
 			children = (
-				52EF52391AE2E12000D3D20D /* GestureModel.h */,
-				52EF523A1AE2E12000D3D20D /* GestureModel.m */,
-				52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */,
-				52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */,
+				527B0AA11AE344B100C9A222 /* constants.h */,
+				527B0AA21AE344B100C9A222 /* emg_gesture.c */,
+				527B0AA31AE344B100C9A222 /* emg_gesture.h */,
+				527B0AA41AE344B100C9A222 /* emg_matrix.c */,
+				527B0AA51AE344B100C9A222 /* emg_matrix.h */,
 			);
-			name = Models;
+			name = "emg-classifier";
+			sourceTree = "<group>";
+		};
+		527B0AA81AE3464300C9A222 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */,
+				52EF521A1AE2DD5700D3D20D /* MainMenu.xib */,
+				52EF52331AE2DD6F00D3D20D /* MainViewController.xib */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 		52EF52051AE2DD5700D3D20D = {
 			isa = PBXGroup;
 			children = (
+				527B0A991AE3339200C9A222 /* emg-classifier */,
 				52EF52101AE2DD5700D3D20D /* EMGCocoaHub */,
 				52EF520F1AE2DD5700D3D20D /* Products */,
 			);
@@ -96,13 +113,14 @@
 		52EF52101AE2DD5700D3D20D /* EMGCocoaHub */ = {
 			isa = PBXGroup;
 			children = (
-				5237C9441AE2FFD30089A0A7 /* Models */,
+				52EF52391AE2E12000D3D20D /* GestureModel.h */,
+				52EF523A1AE2E12000D3D20D /* GestureModel.m */,
+				5237C94E1AE328A70089A0A7 /* KeyCaptureTextField.h */,
+				5237C94F1AE328A70089A0A7 /* KeyCaptureTextField.m */,
+				52EF523D1AE2FBEE00D3D20D /* SerialBluetoothInterface.h */,
+				52EF523E1AE2FBEE00D3D20D /* SerialBluetoothInterface.m */,
 				5237C9431AE2FFCB0089A0A7 /* Views */,
-				52EF52131AE2DD5700D3D20D /* AppDelegate.h */,
-				52EF52141AE2DD5700D3D20D /* AppDelegate.m */,
-				5237C94B1AE312F10089A0A7 /* GestureWindowController.xib */,
-				52EF521A1AE2DD5700D3D20D /* MainMenu.xib */,
-				52EF52331AE2DD6F00D3D20D /* MainViewController.xib */,
+				527B0AA81AE3464300C9A222 /* Interfaces */,
 				52EF52181AE2DD5700D3D20D /* Images.xcassets */,
 				52EF52111AE2DD5700D3D20D /* Supporting Files */,
 			);
@@ -112,6 +130,8 @@
 		52EF52111AE2DD5700D3D20D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52EF52131AE2DD5700D3D20D /* AppDelegate.h */,
+				52EF52141AE2DD5700D3D20D /* AppDelegate.m */,
 				52EF52121AE2DD5700D3D20D /* Info.plist */,
 				52EF52161AE2DD5700D3D20D /* main.m */,
 			);
@@ -191,9 +211,11 @@
 			files = (
 				52EF52171AE2DD5700D3D20D /* main.m in Sources */,
 				52EF523F1AE2FBEE00D3D20D /* SerialBluetoothInterface.m in Sources */,
+				527B0AA71AE344B100C9A222 /* emg_matrix.c in Sources */,
 				52EF523B1AE2E12000D3D20D /* GestureModel.m in Sources */,
 				5237C94C1AE312F10089A0A7 /* GestureWindowController.m in Sources */,
 				52EF52341AE2DD6F00D3D20D /* MainViewController.m in Sources */,
+				527B0AA61AE344B100C9A222 /* emg_gesture.c in Sources */,
 				5237C9501AE328A70089A0A7 /* KeyCaptureTextField.m in Sources */,
 				52EF52151AE2DD5700D3D20D /* AppDelegate.m in Sources */,
 			);

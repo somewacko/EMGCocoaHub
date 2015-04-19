@@ -52,9 +52,21 @@
     self.isTraining = (button.state == NSOnState);
     
     if (self.isTraining)
+    {
         [self displayLog:@"Training mode entered."];
+    }
     else
+    {
         [self displayLog:@"Taken out of training mode."];
+        
+        if (self.tableView.selectedRow > 0)
+        {
+            GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
+            
+            if (!gesture.emg_gesture->is_committed)
+                commit_training(gesture.emg_gesture);
+        }
+    }
 }
 
 
@@ -188,25 +200,69 @@
 }
 
 
+- (void)tableViewSelectionIsChanging:(NSNotification *)notification
+{
+    if (self.isTraining && self.tableView.selectedRow > 0)
+    {
+        GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
+        
+        if (!gesture.emg_gesture->is_committed)
+            commit_training(gesture.emg_gesture);
+    }
+}
+
+
 #pragma mark - SerialBluetoothInterfaceDelegate
 
 - (void)serialBluetoothInterface:(SerialBluetoothInterface *)interface
           didEstablishConnection:(BOOL)connectionEstablished
 {
-    
+    [self displayLog:@"Bluetooth connection established"];
 }
 
 
 - (void)serialBluetoothInterface:(SerialBluetoothInterface *)interface
-               didReceiveMessage:(NSDictionary *)messageInfo
+              didReceiveFeatures:(fmatrix_t *)features
+                         isOnset:(BOOL)isOnset
 {
-    
+    if (self.isTraining)
+    {
+        if (self.tableView.selectedRow > 0)
+        {
+            GestureModel *gesture = [self.gestures objectAtIndex:self.tableView.selectedRow];
+            [gesture addFeatureVector:features];
+            
+            [self displayLog:[NSString stringWithFormat:@"Training received for: \"%@\"", gesture.gestureName]];
+        }
+    }
+    else
+    {
+        if (isOnset)
+        {
+            GestureModel *gesture = [GestureModel classifyFeatureVector:features gestures:self.gestures];
+            
+            if (gesture)
+            {
+                [gesture performKeyDown];
+                
+                [self displayLog:[NSString stringWithFormat:@"Identified gesture: \"%@\"", gesture.gestureName]];
+            }
+            else
+            {
+                [self displayLog:@"Received message but was unable to classify"];
+            }
+        }
+        else
+        {
+            // Doesn't handle offset yet.
+        }
+    }
 }
 
 
 - (void)serialBluetoothInterfaceConnectionDidClose:(SerialBluetoothInterface *)interface
 {
-    
+    [self displayLog:@"Bluetooth connection closed"];
 }
 
 

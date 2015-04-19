@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#include "emg_matrix.h"
+
 
 @class SerialBluetoothInterface;
 
@@ -16,14 +18,10 @@
 
 //  This method gets called whenever the EMG device detects either onset or
 //  offset of motion.
-//
-//  messageInfo contains fields:
-//
-//      "is_onset" : NSNumber - Boolean indicating whether it's onset or offset
-//      "features" : NSArray  - The list of extracted features.
 
 - (void)serialBluetoothInterface:(SerialBluetoothInterface *)interface
-         didReceiveMessage:(NSDictionary *)messageInfo;
+              didReceiveFeatures:(fmatrix_t *)features
+                         isOnset:(BOOL)isOnset;
 
 //  Gets called after establishing or failing to establish connection via the
 //  COM port. If fails, try to reconnect the deivce.

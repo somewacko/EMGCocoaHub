@@ -16,25 +16,58 @@
 
 @implementation GestureModel
 
++ (GestureModel *)classifyFeatureVector:(fmatrix_t *)features gestures:(NSArray *)gestures
+{
+    emg_gesture_t * emg_gestures[gestures.count];
+    
+    for (int i = 0; i < gestures.count; i++)
+        emg_gestures[i] = ((GestureModel *)[gestures objectAtIndex:i]).emg_gesture;
+    
+    classification_info_t info = classify(features, emg_gestures, (unsigned)gestures.count, 1000.f);
+    
+    GestureModel *identifiedGesture;
+    
+    for (GestureModel *gesture in gestures)
+        if (gesture.emg_gesture == info.identified_gesture)
+            identifiedGesture = gesture;
+    
+    return identifiedGesture;
+}
+
+
 - (instancetype)init
 {
     self = [super init];
     
     if (self)
+    {
+        self.emg_gesture = (emg_gesture_t *)malloc(sizeof(emg_gesture_t));
+        *self.emg_gesture = init_emg_gesture("", MAX_CHANNELS*NUM_FEATURES);
         self.numberOfObservations = @0;
+    }
     
     return self;
 }
 
 
+- (void)dealloc
+{
+    free(self.emg_gesture);
+}
+
+
 - (void)clearGesture
 {
+    self.emg_gesture->observations.rows = 0;
+    self.emg_gesture->is_committed = false;
+
     self.numberOfObservations = @0;
 }
 
 
-- (void)addFeatureVector:(float *)features length:(int)length
+- (void)addFeatureVector:(fmatrix_t *)features;
 {
+    train_gesture(self.emg_gesture, features);
     self.numberOfObservations = [NSNumber numberWithInt:self.numberOfObservations.intValue+1];
 }
 
@@ -48,7 +81,7 @@
     CGEventPostToPSN(&psn, keyDown);
     CFRelease(keyDown);
     
-    [self performKeyUp];
+    [self performKeyUp]; // Perform immediately
 }
 
 
